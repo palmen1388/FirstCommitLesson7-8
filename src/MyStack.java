@@ -1,15 +1,15 @@
-public class MyStack {
+public class MyStack<T extends Number> {
 
-    private StackElement first;
+    private StackElement <T> first;
     protected int size = 0;
 
-    public void push(int value) {
-        StackElement newElement = new StackElement(value);
+    public void push(T value) {
+        StackElement <T> newElement = new StackElement<>(value);
         if (first == null) {
             first = newElement;
             size++;
         } else {
-            StackElement currentElement = newElement;
+            StackElement <T> currentElement = newElement;
             currentElement.setNext(first);
             first = currentElement;
             size++;
@@ -18,17 +18,19 @@ public class MyStack {
 
 
     public void pop() {
-        StackElement newFirst = first.getNext();
+        StackElement <T> newFirst = first.getNext();
+        System.out.println("Элемент " + first.getValue() + " удален");
         first = newFirst;
         size--;
     }
 
     public void print() {
-        StackElement currentElement = first;
+        StackElement<T> currentElement = first;
         while (currentElement != null) {
             System.out.println(currentElement.getValue());
             currentElement = currentElement.getNext();
         }
     }
+
 }
 

@@ -2,16 +2,16 @@
 
 public class app {
     public static void main(String[] args) {
-        MyStack turn = new MyStack();
+        MyStack <Integer> turn = new MyStack<>();
         turn.push(1);
-        turn.push(5);
-        turn.push(9);
-        turn.print();
+        turn.push(2);
+        turn.push(3);
         turn.pop();
-        turn.print();
 
-
-
-
+        MyQueue <Double> turn2 = new MyQueue<>();
+        turn2.push(1.0);
+        turn2.push(2.0);
+        turn2.push(3.0);
+        turn2.pop();
     }
 }

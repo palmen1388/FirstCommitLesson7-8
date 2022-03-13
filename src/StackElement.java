@@ -1,25 +1,25 @@
-public class StackElement {
+public class StackElement <T extends Number>{
 
-    private StackElement next;
-    private int value;
+    private StackElement <T> next;
+    private T value;
 
-    public StackElement(int value) {
+    public StackElement(T value) {
         this.value = value;
     }
 
-    public int getValue() {
+    public T getValue() {
         return value;
     }
 
-    public void setValue(int value) {
+    public void setValue(T value) {
         this.value = value;
     }
 
-    public StackElement getNext() {
+    public StackElement<T> getNext() {
         return next;
     }
 
-    public void setNext(StackElement next) {
+    public void setNext(StackElement <T> next) {
         this.next = next;
     }
 }

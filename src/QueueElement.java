@@ -1,25 +1,25 @@
-public class QueueElement {
+public class QueueElement<T> {
 
-    private QueueElement next;
-    private int value;
+    private QueueElement<T> next;
+    private T value;
 
-    public QueueElement(int value) {
+    public QueueElement(T value) {
         this.value = value;
     }
 
-    public int getValue() {
+    public T getValue() {
         return value;
     }
 
-    public void setValue(int value) {
+    public void setValue(T value) {
         this.value = value;
     }
 
-    public QueueElement getNext() {
+    public QueueElement<T> getNext() {
         return next;
     }
 
-    public void setNext(QueueElement next) {
+    public void setNext(QueueElement<T> next) {
         this.next = next;
     }
 }
